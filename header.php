@@ -63,10 +63,16 @@
                     ));
                     ?>
                 </nav>
-                <div id="searchDesktopContainer" class="search-container" onclick="toggleDesktopSearch()">
+                <div class="right-toggle">
+                    <div id="dayNightToggler" class="day-night-toggler">
+                        <i title="Toggle light mode" class="icon icon-sun"></i>
+                        <i title="Toggle night mode" class="icon icon-moon"></i>
+                    </div>
+                    <div id="searchDesktopContainer" class="search-container" onclick="toggleDesktopSearch()">
 
-                    <i class="icon icon-search"></i>
-                    <i class="icon icon-cancel"></i>
+                        <i class="icon icon-search"></i>
+                        <i class="icon icon-cancel"></i>
+                    </div>
                 </div>
 
             </div>

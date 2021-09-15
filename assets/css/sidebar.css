@@ -4,122 +4,82 @@
 *
 **/
 .flex, aside .widget_search form {
-  display: flex;
-}
+  display: flex; }
 
 .ai-c {
-  align-items: center;
-}
+  align-items: center; }
 
 .jc-sb, aside .widget_search form {
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .jc-c {
-  justify-content: center;
-}
+  justify-content: center; }
 
 .jc-fs {
-  justify-content: flex-start;
-}
+  justify-content: flex-start; }
 
 .jc-fe {
-  justify-content: flex-end;
-}
+  justify-content: flex-end; }
 
 .grid {
-  display: grid;
-}
+  display: grid; }
 
 aside {
   background: #fff;
-  position: relative;
-}
-
-aside a {
-  text-decoration: none;
-}
-
-aside h2 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-aside ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-aside .widget {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 18px;
-}
-
-aside .widget_search form label {
-  display: block;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-aside .widget_search form label input {
-  padding: 10px !important;
-  border: none !important;
-  background: #F8F8F9 !important;
-  width: 220px;
-}
-
-aside .widget_search form .search-submit {
-  cursor: pointer;
-  padding: 10px 20px;
-}
-
-aside .widget_search form .search-submit:hover {
-  color: #cc4551;
-}
-
-aside .widget_recent_entries li,
-aside .widget_popular_post_widget li {
-  padding: 10px 0;
-  border-bottom: 2px solid #eeeff1;
-}
-
-aside .widget_recent_entries li a,
-aside .widget_popular_post_widget li a {
-  color: #7c7c7c;
-  font-size: 17px;
-  font-weight: 400;
-}
-
-aside .widget_recent_entries li a:hover,
-aside .widget_popular_post_widget li a:hover {
-  color: #cc4551;
-}
-
-aside .widget_recent_entries li:last-child,
-aside .widget_popular_post_widget li:last-child {
-  border-bottom: none;
-}
-
-aside .widget_archive li,
-aside .widget_categories li {
-  padding: 3px 0;
-}
-
-aside .widget_archive li a,
-aside .widget_categories li a {
-  color: #7c7c7c;
-  font-size: 17px;
-  font-weight: 400;
-}
-
-aside .widget_archive li a:hover,
-aside .widget_categories li a:hover {
-  color: #cc4551;
-}
-
-aside .sticky-sidebar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 60px;
-}
+  position: relative; }
+  aside a {
+    text-decoration: none; }
+  aside h2 {
+    font-size: 18px;
+    font-weight: 700; }
+  aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  aside .widget {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 18px; }
+  aside .widget_search form label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700; }
+    aside .widget_search form label input {
+      padding: 10px !important;
+      border: none !important;
+      background: #F8F8F9 !important;
+      width: 220px; }
+  aside .widget_search form .search-submit {
+    cursor: pointer;
+    padding: 10px 20px; }
+    aside .widget_search form .search-submit:hover {
+      color: #cc4551; }
+  aside .widget_recent_entries li,
+  aside .widget_popular_post_widget li {
+    padding: 10px 0;
+    border-bottom: 2px solid #eeeff1; }
+    aside .widget_recent_entries li a,
+    aside .widget_popular_post_widget li a {
+      color: #7c7c7c;
+      font-size: 17px;
+      font-weight: 400; }
+      aside .widget_recent_entries li a:hover,
+      aside .widget_popular_post_widget li a:hover {
+        color: #cc4551; }
+    aside .widget_recent_entries li:last-child,
+    aside .widget_popular_post_widget li:last-child {
+      border-bottom: none; }
+  aside .widget_archive li,
+  aside .widget_categories li {
+    padding: 3px 0; }
+    aside .widget_archive li a,
+    aside .widget_categories li a {
+      color: #7c7c7c;
+      font-size: 17px;
+      font-weight: 400; }
+      aside .widget_archive li a:hover,
+      aside .widget_categories li a:hover {
+        color: #cc4551; }
+  aside .sticky-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px; }

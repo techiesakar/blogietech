@@ -99,7 +99,7 @@ header {
         @extend .jc-sb;
 
         @include media('<=992px') {
-            width: 36px;
+            // width: 36px;
         }
     }
 }
@@ -110,6 +110,10 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .logo {
+        margin-left: 42px;
     }
 
     img {
@@ -184,6 +188,41 @@ header {
 
 }
 
+.right-toggle {
+
+    width: 82px;
+
+    @include media('<=992px') {
+        // width: 82px;
+    }
+
+    @extend .flex;
+    @extend .ai-c;
+
+    .icon {
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .day-night-toggler {
+        .icon-sun {
+            display: none;
+        }
+        .icon {
+            border: 1px solid #0000003d;
+            border-radius: 4px
+        }
+        &.toggled{
+            .icon-sun{
+                display: block;
+            }
+            .icon-moon{
+                display: none;
+            }
+        }
+    }
+}
+
 .search-container {
     @extend .flex;
     @extend .jc-c;
@@ -206,7 +245,6 @@ header {
     }
 
     .icon {
-        cursor: pointer;
         font-size: 24px;
     }
 

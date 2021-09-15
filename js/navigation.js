@@ -15,7 +15,23 @@ canvasClose.addEventListener('click', function () {
   canvasContainer.classList.remove('toggled');
 });
 
+// For Day Night Mode
+const dayNightToggler = document.getElementById('dayNightToggler');
+dayNightToggler.addEventListener('click', function () {
+  dayNightToggler.classList.toggle('toggled');
+  document.body.classList.toggle('night-mode');
+  if (document.body.classList.contains('night-mode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
 
+if (localStorage.getItem('darkMode') == 'enabled') {
+  document.body.classList.toggle('night-mode');
+}
+
+// Dark Mode Ends
 
 var searchDesktopContainer = document.getElementById("searchDesktopContainer");
 
@@ -28,11 +44,11 @@ function toggleDesktopSearch() {
   setTimeout(() => autofocusdesktop.focus(), 100);
 }
 // For Click outside
-window.addEventListener('mouseup', function(event){
-	if (event.target != searchDesktopContainer && event.target.parentNode != searchDesktopContainer){
+window.addEventListener('mouseup', function (event) {
+  if (event.target != searchDesktopContainer && event.target.parentNode != searchDesktopContainer) {
     searchDesktopOverlay.classList.remove("active");
     searchDesktopContainer.classList.remove("active");
-    }
+  }
 });
 
 // Click outside ends
