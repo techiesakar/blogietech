@@ -15,7 +15,10 @@ canvasClose.addEventListener('click', function () {
   canvasContainer.classList.remove('toggled');
 });
 
+
+
 var searchDesktopContainer = document.getElementById("searchDesktopContainer");
+
 
 function toggleDesktopSearch() {
   var searchDesktopOverlay = document.getElementById("searchDesktopOverlay");
@@ -24,6 +27,15 @@ function toggleDesktopSearch() {
   var autofocusdesktop = document.getElementById("search-input");
   setTimeout(() => autofocusdesktop.focus(), 100);
 }
+// For Click outside
+window.addEventListener('mouseup', function(event){
+	if (event.target != searchDesktopContainer && event.target.parentNode != searchDesktopContainer){
+    searchDesktopOverlay.classList.remove("active");
+    searchDesktopContainer.classList.remove("active");
+    }
+});
+
+// Click outside ends
 
 // For Scroll Function
 var mybutton = document.getElementById("myBtn");
@@ -36,15 +48,9 @@ function scrollFunction() {
 
   // For Navbar
   var currentScrollPos = window.pageYOffset;
-  // if (prevScrollpos > currentScrollPos) {
-  //   document.getElementById("header").style.top = "0";
-  // } else {
-  //   document.getElementById("header").style.top = "-90px";
-  // }
   prevScrollpos = currentScrollPos;
   // Navbar Ends
 
-  // scroll To Top
   // for scroll indicator
   scrollIndicator()
 
@@ -54,6 +60,8 @@ function scrollFunction() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("scrollIndicator").style.width = scrolled + "%";
   }
+
+  // Scroll to top
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "flex";
   } else {
