@@ -21,15 +21,18 @@ dayNightToggler.addEventListener('click', function () {
   dayNightToggler.classList.toggle('toggled');
   document.body.classList.toggle('night-mode');
   if (document.body.classList.contains('night-mode')) {
-    localStorage.setItem('darkMode', 'enabled');
+    localStorage.setItem('dayNightToggler', 'enabled');
   } else {
-    localStorage.setItem('darkMode', 'disabled');
+    localStorage.setItem('dayNightToggler', 'disabled');
   }
 });
 
-if (localStorage.getItem('darkMode') == 'enabled') {
+if (localStorage.getItem('dayNightToggler') == 'enabled') {
   document.body.classList.toggle('night-mode');
+  dayNightToggler.classList.add('toggled');  
 }
+
+
 
 // Dark Mode Ends
 
