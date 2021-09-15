@@ -1,0 +1,112 @@
+@import "./media.scss";
+@import "./flex.scss";
+@import "./variable.scss";
+
+aside {
+    background: #fff;
+    position: relative;
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        //For Widget Title
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .widget {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 18px;
+    }
+
+    .widget_search {
+        form {
+            @extend .flex;
+            @extend .jc-sb;
+
+            label {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+
+                input {
+                    padding: 10px !important;
+                    border: none !important;
+                    background: #F8F8F9 !important;
+                    width: 220px;
+                }
+            }
+
+            .search-submit {
+                cursor: pointer;
+                padding: 10px 20px;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+
+    // Search Widget Ends
+
+
+
+
+    .widget_recent_entries,
+    .widget_popular_post_widget {
+
+        // For latest Posts
+        li {
+            padding: 10px 0;
+            border-bottom: 2px solid #eeeff1;
+
+            a {
+                color: #7c7c7c;
+                font-size: 17px;
+                font-weight: 400;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+    }
+
+    // Recent Posts Ends
+    .widget_archive,
+    .widget_categories {
+        li {
+            padding: 3px 0;
+
+            a {
+                color: #7c7c7c;
+                font-size: 17px;
+                font-weight: 400;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+
+    .sticky-sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 60px;
+    }
+}

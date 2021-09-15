@@ -1,0 +1,20 @@
+@import "./media.scss";
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include media('>=768px') {
+        width: 750px;
+    }
+
+    @include media('>=992px') {
+        width: 970px;
+    }
+
+    @include media('>=1200px') {
+        width: 1170px;
+        padding: 0;
+    }
+
+}

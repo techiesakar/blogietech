@@ -1,0 +1,81 @@
+/**
+*
+* Testing
+*
+**/
+.flex {
+  display: flex;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  background-color: #2685F4;
+  min-height: 22rem;
+  margin-bottom: -120px;
+}
+
+@media (max-width: 1022px) {
+  .banner {
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    display: none;
+  }
+}
+
+.banner svg {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+}
+
+.banner .post-details {
+  padding: 6px 0;
+}
+
+.banner .page-title {
+  font-size: 42px;
+  color: #fff;
+}
+
+@media (max-width: 1022px) {
+  .banner .page-title {
+    font-size: 32px;
+    margin: 8px 0;
+  }
+}
+
+.banner .subtitle {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+}

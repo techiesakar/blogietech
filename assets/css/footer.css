@@ -1,0 +1,271 @@
+/**
+*
+* Testing
+*
+**/
+.flex, footer .footer-top, footer .footer-top .footer-social-area ul {
+  display: flex;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-sb, footer .footer-top {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+/**
+*
+* Testing
+*
+**/
+.container, footer .footer-top, footer .sub-footer .sub-footer-wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container, footer .footer-top, footer .sub-footer .sub-footer-wrapper {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, footer .footer-top, footer .sub-footer .sub-footer-wrapper {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, footer .footer-top, footer .sub-footer .sub-footer-wrapper {
+    width: 1170px;
+    padding: 0;
+  }
+}
+
+footer {
+  background: #212025;
+}
+
+footer .footer-top {
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+footer .footer-top a {
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-top {
+    display: block;
+  }
+  footer .footer-top > * {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+footer .footer-top .widget-title {
+  text-transform: uppercase;
+}
+
+footer .footer-top .footer-logo-area {
+  width: 25%;
+  margin-top: 35px;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top .footer-logo-area {
+    width: 30%;
+  }
+}
+
+footer .footer-top .footer-about-area {
+  width: 42%;
+  font-size: 16px;
+  color: #938d8d;
+  padding: 0 32px;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top .footer-about-area {
+    width: 70%;
+  }
+}
+
+footer .footer-top .footer-about-area .footer-contact-label {
+  color: #fff;
+}
+
+footer .footer-top .footer-social-area {
+  width: 33%;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top .footer-social-area {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+footer .footer-top .footer-social-area ul {
+  margin-top: 12px;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top .footer-social-area ul {
+    justify-content: center;
+  }
+}
+
+footer .footer-top .footer-social-area ul li {
+  margin-right: 18px;
+}
+
+footer .footer-top .footer-social-area ul li a {
+  color: #fff;
+  font-size: 24px;
+  padding: 8px 10px;
+  border-radius: 2px;
+  transition: 0.4s ease;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+footer .footer-top .footer-social-area ul li a .fa-facebook:hover {
+  color: #4267B2;
+}
+
+footer .footer-top .footer-social-area ul li a .fa-twitter:hover {
+  color: #1C9CEA;
+}
+
+footer .footer-top .footer-social-area ul li a .fa-instagram:hover {
+  color: #e1306c;
+}
+
+footer .footer-top .footer-social-area ul li a .fa-github:hover {
+  color: #000;
+}
+
+footer .footer-top #menu-footer a,
+footer .footer-top .widget_categories a {
+  font-weight: 400;
+}
+
+footer .footer-top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-top .widget-title {
+  margin: 6px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+footer .sub-footer {
+  background-color: #0D0D0D;
+  line-height: 42px;
+}
+
+@media (max-width: 992px) {
+  footer .sub-footer {
+    text-align: center;
+  }
+}
+
+footer .sub-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .sub-footer .sub-footer-wrapper {
+  padding: 12px 20px;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  footer .sub-footer .sub-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+footer .sub-footer .sub-footer-wrapper a {
+  text-decoration: none;
+}
+
+footer .sub-footer .sub-footer-wrapper p {
+  margin: 0;
+}
+
+footer .sub-footer .sub-footer-wrapper .widget {
+  margin: 0;
+}
+
+footer .sub-footer .sub-footer-wrapper .footer-copyright a {
+  color: #2685F4;
+}
+
+footer .sub-footer .sub-footer-wrapper .footer-menu {
+  order: 2;
+}
+
+footer .sub-footer .sub-footer-wrapper .footer-menu ul {
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  footer .sub-footer .sub-footer-wrapper .footer-menu ul {
+    justify-content: center;
+  }
+}
+
+footer .sub-footer .sub-footer-wrapper .footer-menu a {
+  color: #ccc;
+  margin-right: 12px;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #2685F4;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease-in;
+}
+
+.scroll-top:hover {
+  background: #cc4551;
+}
