@@ -73,8 +73,13 @@
         ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_content() ?>
-            <?php get_template_part('template-parts/components/social', 'share'); ?>
+            
         </article>
+        <?php get_template_part('template-parts/components/social', 'share'); ?>
+        <div class="post-tags">
+            <?php echo get_the_tag_list('<p>Tags: ','','</p>'); ?>
+        </div>
+        <?php get_template_part('template-parts/components/author','box'); ?>
 
         <?php if (comments_open() || get_comments_number()) :
             comments_template();

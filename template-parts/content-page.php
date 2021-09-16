@@ -10,24 +10,8 @@
 
 ?>
 
-
-<section class="single-header container">
-	<?php the_category(); ?>
-
-	<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-	<?php
-	$subtitle = get_post_meta(get_the_ID(), 'blogietech_subtitle_subtitle', true);
-	if (!empty($subtitle)) {
-		echo '<div class="entry-subtitle">' . $subtitle . '</div>';
-	}
-	?>
-
-</section>
-<!-- Single Header Ends -->
-
-
-<div class="container single-body">
-	<div class="single-primary" role="main">
+<div class="container page-body">
+	<div class="primary" role="main">
 		<?php
 		// Checking condition for featured image
 		$featured_image_status = get_post_meta(get_the_ID(), 'enable_featured_imageenable-featured-image', true);
@@ -60,4 +44,4 @@
 
 
 </div>
-<!-- Single Body Ends -->
+<!-- Page Body Ends -->

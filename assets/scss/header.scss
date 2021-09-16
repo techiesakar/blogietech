@@ -3,9 +3,10 @@
 @import "./variable.scss";
 $header-height : 68px;
 
-.admin-bar{
-    header{
+.admin-bar {
+    header {
         top: 32px;
+
         @include media('<=768px') {
             top: 48px;
         }
@@ -217,15 +218,18 @@ header {
         .icon-sun {
             display: none;
         }
+
         .icon {
             border: 1px solid #0000003d;
             border-radius: 4px
         }
-        &.toggled{
-            .icon-sun{
+
+        &.toggled {
+            .icon-sun {
                 display: block;
             }
-            .icon-moon{
+
+            .icon-moon {
                 display: none;
             }
         }
@@ -458,4 +462,28 @@ header {
     width: 0%;
     height: 4px;
     background: $hover-color;
+}
+
+// Night Mode Fix
+
+.night-mode {
+    header {
+        background: $night-mode-bg;
+        border-bottom: 0.5px solid $blue;
+        .menu-toggle {
+            svg * {
+                fill: $white !important;
+            }
+        }
+
+        .icon {
+            color: #fff;
+        }
+
+        .day-night-toggler{
+            .icon{
+                border: 1px solid #ffffffab;
+            }
+        }
+    }
 }

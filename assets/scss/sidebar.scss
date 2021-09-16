@@ -109,3 +109,17 @@ aside {
         top: 60px;
     }
 }
+
+// Night Mode Fix
+
+.night-mode {
+    aside.sidebar {
+        .widget {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+
+            li{
+                border-bottom: 1px solid #f5f5f58c;
+            }
+        }
+    }
+}

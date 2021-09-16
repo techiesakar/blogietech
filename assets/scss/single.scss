@@ -2,7 +2,8 @@
 @import "./flex.scss";
 @import "./variable.scss";
 
-.single-header {
+.single-header,
+.page-header {
     margin-bottom: 20px !important;
 
     a {
@@ -29,7 +30,6 @@
 
     .entry-title {
         max-width: 970px;
-        font-size: 2.027rem;
         font-weight: 700;
         line-height: 1.3;
         margin: $margin-entry-title;
@@ -39,10 +39,7 @@
             line-height: 1.2;
         }
 
-        @include media('>=992px') {
-            font-size: 2.986rem;
-            line-height: 1.1;
-        }
+
     }
 
     .entry-subtitle {
@@ -53,11 +50,14 @@
         color: rgba(0, 0, 0, 0.4);
 
         @include media('>=768px') {
-            font-size: 1.2857rem;
+            font-size: 1.1rem;
             line-height: 1.4;
         }
     }
+}
 
+
+.single-header {
     .entry-meta {
         @extend .flex;
         @extend .ai-c;
@@ -88,11 +88,32 @@
             }
         }
     }
+
+    .entry-title {
+        max-width: 970px;
+        font-size: 2.027rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: $margin-entry-title;
+
+        @include media('>=768px') {
+
+            line-height: 1.2;
+        }
+
+        @include media('>=992px') {
+            font-size: 2.986rem;
+            line-height: 1.1;
+        }
+
+
+    }
 }
 
 // Single Header Ends
 
-.single-body {
+.single-body,
+.page-body {
     margin-top: 20px;
 
     a {
@@ -104,6 +125,8 @@
     }
 
 }
+
+// Social Share Container
 
 .social-share-container {
     @extend .flex;
@@ -141,5 +164,74 @@
 
     .pinterest-btn {
         background: $pinterest-color;
+    }
+}
+
+// Author Box
+
+.author-box {
+    margin-top: 40px;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.089) 0px 0px 0px 1px;
+    border-radius: 4px;
+
+    @include media('<=768px') {
+        padding: 12px;
+    }
+
+    .author-avatar {
+        @extend .flex;
+        @extend .jc-c;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .author-content {
+        text-align: center;
+
+        .author-name {
+            margin-top: 12px;
+
+            a {
+                font-weight: 600;
+                color: #444;
+            }
+        }
+
+        .author-desc {
+            p {
+                margin: 12px 0;
+                font-size: 14px;
+                color: #7c7c7c;
+            }
+        }
+
+        .author-social-links {
+            ul {
+                @extend .flex;
+                @extend .jc-c;
+                padding: 0;
+            }
+        }
+    }
+}
+
+// Night Mode Fix
+
+.night-mode {
+    &.single-post {
+        .entry-subtitle {
+            color: #f1f1ff;
+        }
+
+        .entry-meta {
+            color: #f1f1f1 !important;
+
+            a {
+                color: $red;
+            }
+        }
     }
 }

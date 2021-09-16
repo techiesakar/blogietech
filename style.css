@@ -414,7 +414,7 @@ optgroup,
 textarea {
 	color: #464b52;
 	font-family: 'Lato', Arial, sans-serif;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.005em;
@@ -482,12 +482,12 @@ big {
 	font-size: 125%;
 }
 
-.page-title{
+.page-title {
 	font-size: 28px;
 	color: #cc4551;
 }
 
-.entry-title{
+.entry-title {
 	color: #cc4551;
 }
 
@@ -549,7 +549,7 @@ a {
 }
 
 a:visited {
-	color: #800080;
+	color: #cc4551;
 }
 
 a:hover,
@@ -652,9 +652,6 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-
-
-/* Comments */
 
 /* Widgets
 --------------------------------------------- */
@@ -785,6 +782,7 @@ textarea {
 }
 
 
+
 /* -------------Container-----------------*/
 .container {
 	margin: 0 auto;
@@ -822,7 +820,8 @@ textarea {
 .homepage-content,
 .single-body,
 .archive-body,
-.search-body {
+.search-body,
+.page-body {
 	display: flex;
 	justify-content: space-between;
 }
@@ -841,7 +840,8 @@ main {
 	.homepage-content,
 	.single-body,
 	.archive-body,
-	.search-body {
+	.search-body,
+	.page-body {
 		display: block;
 	}
 }
@@ -889,6 +889,27 @@ main {
 
 /* --------- Alignments Ends  */
 
+/* For Search Page */
+.search-header .page-title span {
+	color: #32466b;
+}
+
+.search-body form {
+	border-radius: 0;
+}
+
+.search-body .page-subtitle {
+	font-size: 14px;
+	font-style: italic;
+}
+
+/* Dark Mode Fix */
+
+body.night-mode{
+	background-color: #121212;
+	color: #f5f5f58c;
+}
+
 img[data-src] {
 	opacity: 0;
 	transition: opacity .25s ease-in-out;
@@ -916,14 +937,14 @@ img[data-src][src] {
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-  @media screen and (-webkit-min-device-pixel-ratio:0) {
+/**/
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
 	@font-face {
 	  font-family: 'fontello';
-	  src: url('../font/fontello.svg?50693072#fontello') format('svg');
+	  src: url('./assets/webfonts/fontello/fontello.svg?50693072#fontello') format('svg');
 	}
-  }
-  */
+  } */
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
 	font-family: "fontello";

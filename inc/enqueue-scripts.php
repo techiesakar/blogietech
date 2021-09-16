@@ -32,18 +32,6 @@ function blogietech_scripts()
             filemtime(get_template_directory() . '/assets/css/single.css'),
             false
         );
-
-
-        // -------- Social Share
-
-        wp_enqueue_script(
-            //For Social Share
-            'blogietech-social-share',
-            get_template_directory_uri() . '/js/social-share.js',
-            array(),
-            filemtime(get_template_directory() . '/js/social-share.js'),
-            true
-        );
     };
 
 
