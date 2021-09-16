@@ -831,9 +831,7 @@ main {
 	}
 }
 
-.homepage-content .site-main,
-.single-body .single-primary,
-.archive-primary {
+.primary {
 	width: 100%;
 	min-height: 1px;
 	padding: 0;
@@ -841,18 +839,14 @@ main {
 
 @media (min-width: 992px) {
 
-	.homepage-content .site-main,
-	.single-body .single-primary,
-	.archive-primary {
+.primary {
 		width: 680px;
 	}
 }
 
 @media (min-width: 1200px) {
 
-	.homepage-content .site-main,
-	.single-body .single-primary,
-	.archive-primary {
+	.primary{
 		width: 790px;
 	}
 }

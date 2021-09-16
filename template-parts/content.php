@@ -56,7 +56,7 @@
 
 
 <div class="container single-body">
-    <div class="single-primary" role="main">
+    <div class="primary" role="main">
         <?php
         // Checking condition for featured image
         $featured_image_status = get_post_meta(get_the_ID(), 'enable_featured_imageenable-featured-image', true);

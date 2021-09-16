@@ -20,13 +20,7 @@ function blogietech_scripts()
             false
         );
 
-        wp_enqueue_style(
-            'blogietech-banner',
-            get_template_directory_uri() . '/assets/css/banner.css',
-            array(),
-            filemtime(get_template_directory() . '/assets/css/banner.css'),
-            false
-        );
+       
     };
 
     if (is_singular()) {
