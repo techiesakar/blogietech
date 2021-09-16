@@ -37,6 +37,7 @@ if (localStorage.getItem('dayNightToggler') == 'enabled') {
 // Dark Mode Ends
 
 var searchDesktopContainer = document.getElementById("searchDesktopContainer");
+var searchInput = document.getElementById("search-input");
 
 
 function toggleDesktopSearch() {
@@ -48,7 +49,7 @@ function toggleDesktopSearch() {
 }
 // For Click outside
 window.addEventListener('mouseup', function (event) {
-  if (event.target != searchDesktopContainer && event.target.parentNode != searchDesktopContainer) {
+  if (event.target != searchDesktopContainer && event.target.parentNode != searchDesktopContainer && event.target!= searchInput) {
     searchDesktopOverlay.classList.remove("active");
     searchDesktopContainer.classList.remove("active");
   }

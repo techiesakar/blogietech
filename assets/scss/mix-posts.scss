@@ -6,7 +6,6 @@
 .homepage-content {
     position: relative;
     z-index: 1;
-    background: $white;
     padding: 0;
 
     @include media('<=768px') {
@@ -18,34 +17,7 @@
         text-decoration: none;
     }
 
-    article {
-        padding: 36px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-        @include media('<=1022px') {
-            padding: 14px;
-        }
-
-
-
-    }
-
-    h2 {
-        margin: 4px 0;
-    }
-
-    p {
-        font-weight: 400;
-    }
-
-    .post-title {
-
-        font-size: 18px;
-        line-height: 1.4;
-        color: $nav-color;
-
-    }
-
+    
 }
 
 
@@ -68,9 +40,33 @@
     @include media('<=620px') {
         display: block;
     }
+    a{
+        text-decoration: none;
+    }
+
+    .post-title {
+
+        font-size: 18px;
+        line-height: 1.4;
+        color: $nav-color;
+    }
+
+    h2 {
+        margin: 4px 0;
+    }
+
+    p {
+        font-weight: 400;
+    }
 
     article {
-        margin: 0;
+        margin:0;
+        padding: 36px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        @include media('<=1022px') {
+            padding: 14px;
+        }
     }
 
     .post-item-1 {
@@ -274,7 +270,6 @@
     list-style: none;
     text-align: center;
     padding: 30px 40px;
-    background: $white;
     margin-top: 30px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;

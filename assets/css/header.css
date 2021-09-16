@@ -24,9 +24,15 @@
 .grid {
   display: grid; }
 
+.admin-bar header {
+  top: 32px; }
+  @media (max-width: 768px) {
+    .admin-bar header {
+      top: 48px; } }
+
 header {
   position: fixed;
-  z-index: 99999;
+  z-index: 99998;
   top: 0;
   right: 0;
   left: 0;
@@ -197,7 +203,8 @@ header {
   height: 100%;
   padding: 2px;
   border: 1px solid rgba(155, 155, 155, 0.2);
-  border-radius: 32px; }
+  border-radius: 32px;
+  max-height: 50px; }
   .search-form .search-data {
     /* Input Field */
     width: 100%;

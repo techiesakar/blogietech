@@ -482,6 +482,15 @@ big {
 	font-size: 125%;
 }
 
+.page-title{
+	font-size: 28px;
+	color: #cc4551;
+}
+
+.entry-title{
+	color: #cc4551;
+}
+
 /* Elements
 --------------------------------------------- */
 
@@ -812,9 +821,14 @@ textarea {
 
 .homepage-content,
 .single-body,
-.archive-body {
+.archive-body,
+.search-body {
 	display: flex;
 	justify-content: space-between;
+}
+
+.admin-bar main {
+	padding-top: 84px;
 }
 
 main {
@@ -826,7 +840,8 @@ main {
 
 	.homepage-content,
 	.single-body,
-	.archive-body {
+	.archive-body,
+	.search-body {
 		display: block;
 	}
 }
@@ -839,14 +854,14 @@ main {
 
 @media (min-width: 992px) {
 
-.primary {
+	.primary {
 		width: 680px;
 	}
 }
 
 @media (min-width: 1200px) {
 
-	.primary{
+	.primary {
 		width: 790px;
 	}
 }

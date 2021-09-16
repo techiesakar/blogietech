@@ -194,7 +194,7 @@ require get_template_directory() . '/inc/plugins/view-counter.php';
 require get_template_directory() . '/inc/plugins/emoji-off.php';
 require get_template_directory() . '/inc/plugins/enable-featured-image.php';
 
-// require get_template_directory() . '/inc/plugins/compare/compare.php';
+
 
 
 // /** * Completely Remove jQuery From WordPress */
@@ -207,5 +207,54 @@ require get_template_directory() . '/inc/plugins/enable-featured-image.php';
 // }
 // add_action('init', 'my_init');
 
-// /* Remove admin bar */
-// remove_action('init', 'wp_admin_bar_init');
+
+// Filter only posts in wordpress search result
+
+if (!is_admin()) {
+	function wpb_search_filter($query)
+	{
+		if ($query->is_search) {
+			$query->set('post_type', 'post');
+		}
+		return $query;
+	}
+	add_filter('pre_get_posts', 'wpb_search_filter');
+}
+
+// Filter Search Result Only By Title - Without Looking Content
+function search_by_title( $search, $wp_query ) {
+    if ( ! empty( $search ) && ! empty( $wp_query->query_vars['search_terms'] ) ) {
+        global $wpdb;
+
+        $q = $wp_query->query_vars;
+        $n = ! empty( $q['exact'] ) ? '' : '%';
+
+        $search = array();
+
+        foreach ( ( array ) $q['search_terms'] as $term )
+            $search[] = $wpdb->prepare( "$wpdb->posts.post_title LIKE %s", $n . $wpdb->esc_like( $term ) . $n );
+
+        if ( ! is_user_logged_in() )
+            $search[] = "$wpdb->posts.post_password = ''";
+
+        $search = ' AND ' . implode( ' AND ', $search );
+    }
+
+    return $search;
+}
+
+
+$args = array(
+    's' => 'search string',
+    'numberposts' => 5,
+    'offset' => 0,
+    'category' => 0,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'suppress_filters' => true);
+
+add_filter( 'posts_search', 'search_by_title', 10, 2 );
+$recent_posts = wp_get_recent_posts($args, ARRAY_A);
+remove_filter( 'posts_search', 'search_by_title', 500 );

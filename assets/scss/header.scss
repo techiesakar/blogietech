@@ -3,9 +3,18 @@
 @import "./variable.scss";
 $header-height : 68px;
 
+.admin-bar{
+    header{
+        top: 32px;
+        @include media('<=768px') {
+            top: 48px;
+        }
+    }
+}
+
 header {
     position: fixed;
-    z-index: 99999;
+    z-index: 99998;
     top: 0;
     right: 0;
     left: 0;
@@ -308,6 +317,7 @@ header {
     padding: 2px;
     border: 1px solid rgba(155, 155, 155, 0.2);
     border-radius: 32px;
+    max-height: 50px;
 
     .search-data {
         /* Input Field */

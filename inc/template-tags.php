@@ -186,9 +186,7 @@ if (!function_exists('blogietech_pagination')) :
 		$total = $wp_query->max_num_pages;
 		$big = 99999999;
 		if ($total > 1) {
-			if (!$current_page = get_query_var('paged'))
-				$current_page = 1;
-
+			echo '<div class="pagination">';
 			echo paginate_links(array(
 				'base'			=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 				'format'       => '?paged=%#%',
@@ -201,6 +199,7 @@ if (!function_exists('blogietech_pagination')) :
 				'add_args'     => false,
 				'add_fragment' => '',
 			));
+			echo '</div>';
 		}
 	}
 endif;

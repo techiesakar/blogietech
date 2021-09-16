@@ -46,7 +46,6 @@
 .homepage-content {
   position: relative;
   z-index: 1;
-  background: #fff;
   padding: 0; }
   @media (max-width: 768px) {
     .homepage-content {
@@ -54,20 +53,6 @@
       padding: 14px; } }
   .homepage-content a {
     text-decoration: none; }
-  .homepage-content article {
-    padding: 36px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
-    @media (max-width: 1022px) {
-      .homepage-content article {
-        padding: 14px; } }
-  .homepage-content h2 {
-    margin: 4px 0; }
-  .homepage-content p {
-    font-weight: 400; }
-  .homepage-content .post-title {
-    font-size: 18px;
-    line-height: 1.4;
-    color: #32466b; }
 
 .featured-content {
   display: grid;
@@ -79,8 +64,23 @@
   @media (max-width: 620px) {
     .featured-content {
       display: block; } }
+  .featured-content a {
+    text-decoration: none; }
+  .featured-content .post-title {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #32466b; }
+  .featured-content h2 {
+    margin: 4px 0; }
+  .featured-content p {
+    font-weight: 400; }
   .featured-content article {
-    margin: 0; }
+    margin: 0;
+    padding: 36px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
+    @media (max-width: 1022px) {
+      .featured-content article {
+        padding: 14px; } }
   .featured-content .post-item-1 {
     grid-area: 1 / 1 / 2 / 3; }
     @media (max-width: 768px) {
@@ -225,7 +225,6 @@
   list-style: none;
   text-align: center;
   padding: 30px 40px;
-  background: #fff;
   margin-top: 30px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative; }

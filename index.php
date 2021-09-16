@@ -20,12 +20,14 @@ get_header();
     <div class="container main-container homepage-content">
         <div class="primary">
             <div class="featured-content">
-                <?php get_template_part('template-parts/blocks/mixed-style', 'posts');
+                <?php
+                get_template_part('template-parts/blocks/mixed-style', 'posts');
                 ?>
             </div>
+
+
         </div>
         <aside class="sidebar">
-
             <?php
             dynamic_sidebar('home-sidebar-1');
 
@@ -35,10 +37,12 @@ get_header();
             </div>
         </aside>
     </div>
-    <div class="pagination">
-        <?php
-        blogietech_pagination(); ?>
-    </div>
+
+
+    <?php
+    blogietech_pagination(); ?>
+
+
 </main>
 
 

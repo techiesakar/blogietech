@@ -10,7 +10,7 @@ function blogietech_scripts()
     );
     // for home only
 
-    if (is_home()) {
+    // if (is_home()) {
 
         wp_enqueue_style(
             'blogietech-mix-posts',
@@ -21,7 +21,7 @@ function blogietech_scripts()
         );
 
        
-    };
+    // };
 
     if (is_singular()) {
 

@@ -5,8 +5,6 @@ while (have_posts()) :
     the_post(); ?>
     <?php if ($count <= $default_posts_per_page) : ?>
         <?php
-        // set_query_var('show_date', $show_date);
-        // set_query_var('show_author', $show_author); 
         ?>
         <?php
         if ($count == 1) : ?>
@@ -107,4 +105,7 @@ while (have_posts()) :
 <?php $count++;
 
 endwhile;
+
+wp_reset_postdata();
+
 ?>
