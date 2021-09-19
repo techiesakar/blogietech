@@ -107,7 +107,7 @@ function blogietech_widgets_init()
 
     register_sidebar(array(
         'name'          => esc_html__('Footer Menu', 'blogietech'),
-        'id'            => 'sub-footer-menu',
+        'id'            => 'footer-bottom-menu',
         'description' => "Place Footer Menu Here",
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',

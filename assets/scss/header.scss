@@ -132,7 +132,16 @@ header {
         vertical-align: middle;
     }
 }
+.night-mode .custom-logo-link{
+    display: none;
+}
+.custom-logo-link.night-mode-header-logo {
+    display: none;
+}
 
+.night-mode .night-mode-header-logo{
+    display: block;
+}
 #site-navigation {
     @include media('<=992px') {
         display: none;
@@ -373,6 +382,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
+    max-width: 300px;
     background: rgba(255, 255, 255, 0.932);
     background-repeat: no-repeat;
     background-size: cover;

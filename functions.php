@@ -222,39 +222,41 @@ if (!is_admin()) {
 }
 
 // Filter Search Result Only By Title - Without Looking Content
-function search_by_title( $search, $wp_query ) {
-    if ( ! empty( $search ) && ! empty( $wp_query->query_vars['search_terms'] ) ) {
-        global $wpdb;
+function search_by_title($search, $wp_query)
+{
+	if (!empty($search) && !empty($wp_query->query_vars['search_terms'])) {
+		global $wpdb;
 
-        $q = $wp_query->query_vars;
-        $n = ! empty( $q['exact'] ) ? '' : '%';
+		$q = $wp_query->query_vars;
+		$n = !empty($q['exact']) ? '' : '%';
 
-        $search = array();
+		$search = array();
 
-        foreach ( ( array ) $q['search_terms'] as $term )
-            $search[] = $wpdb->prepare( "$wpdb->posts.post_title LIKE %s", $n . $wpdb->esc_like( $term ) . $n );
+		foreach ((array) $q['search_terms'] as $term)
+			$search[] = $wpdb->prepare("$wpdb->posts.post_title LIKE %s", $n . $wpdb->esc_like($term) . $n);
 
-        if ( ! is_user_logged_in() )
-            $search[] = "$wpdb->posts.post_password = ''";
+		if (!is_user_logged_in())
+			$search[] = "$wpdb->posts.post_password = ''";
 
-        $search = ' AND ' . implode( ' AND ', $search );
-    }
+		$search = ' AND ' . implode(' AND ', $search);
+	}
 
-    return $search;
+	return $search;
 }
 
 
 $args = array(
-    's' => 'search string',
-    'numberposts' => 5,
-    'offset' => 0,
-    'category' => 0,
-    'orderby' => 'post_date',
-    'order' => 'DESC',
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'suppress_filters' => true);
+	's' => 'search string',
+	'numberposts' => 5,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'post_date',
+	'order' => 'DESC',
+	'post_type' => 'post',
+	'post_status' => 'publish',
+	'suppress_filters' => true
+);
 
-add_filter( 'posts_search', 'search_by_title', 10, 2 );
+add_filter('posts_search', 'search_by_title', 10, 2);
 $recent_posts = wp_get_recent_posts($args, ARRAY_A);
-remove_filter( 'posts_search', 'search_by_title', 500 );
+remove_filter('posts_search', 'search_by_title', 500);

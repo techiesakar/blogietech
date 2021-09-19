@@ -20,12 +20,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186108748-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-186108748-1');
+    </script>
+
+    <script data-ad-client="ca-pub-6843601106818623" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header id="header">
+    <header id="header" style="background: <?php echo get_theme_mod( 'bt_header_bg_color','#fff' ); ?>;">
+
         <div id="desktop" class="container">
             <div class="left">
                 <span id="menuToggle" class="menu-toggle mobile-menu-icon-svg"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
@@ -36,6 +51,20 @@
                     <?php if (function_exists('the_custom_logo') && has_custom_logo()) : ?>
                         <div class="logo">
                             <?php the_custom_logo(); ?>
+                            <?php
+
+                            $logo_names = [
+                                'header_logo',
+                                'footer_logo',
+                            ];
+                            $setting_id = sprintf('bt_%s','header_logo');
+                            $logo_url = get_theme_mod($setting_id);
+                           
+                            ?>
+                          <a class="custom-logo-link night-mode-header-logo" href="<?php echo get_home_url(); ?>">
+                          <img class="custom-logo" src="<?php print_r($logo_url) ?>" alt="<?php bloginfo(); ?>">
+                          </a>
+
                         </div>
                     <?php
                     else : ?>

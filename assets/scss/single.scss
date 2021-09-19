@@ -91,13 +91,13 @@
 
     .entry-title {
         max-width: 970px;
-        font-size: 2.027rem;
+        font-size: 1.6em;
         font-weight: 700;
         line-height: 1.3;
         margin: $margin-entry-title;
 
         @include media('>=768px') {
-
+            font-size: 2.027rem;
             line-height: 1.2;
         }
 

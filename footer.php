@@ -12,7 +12,7 @@
 
 ?>
 
-<footer role="contentinfo">
+<footer role="contentinfo" style="background: <?php echo get_theme_mod( 'bt_top_footer_bg','#212025' ); ?>;" >
     <div class="footer-top">
         <div class="footer-logo-area">
             <?php
@@ -26,11 +26,11 @@
             <?php dynamic_sidebar('footer-social'); ?>
         </div>
     </div>
-    <div class="sub-footer">
-        <div class="sub-footer-wrapper">
+    <div class="footer-bottom" style="background: <?php echo get_theme_mod( 'bt_bottom_footer_bg','#0D0D0D' ); ?>;">
+        <div class="footer-bottom-wrapper">
 
             <div class="footer-menu">
-                <?php dynamic_sidebar('sub-footer-menu'); ?>
+                <?php dynamic_sidebar('footer-bottom-menu'); ?>
             </div>
 
             <div class="footer-copyright">

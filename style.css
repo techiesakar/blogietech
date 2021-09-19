@@ -169,7 +169,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 12px;
 }
 
 /**
@@ -826,12 +826,10 @@ textarea {
 	justify-content: space-between;
 }
 
-.admin-bar main {
-	padding-top: 84px;
-}
+
 
 main {
-	padding-top: 72px;
+	padding-top: 68px!important;
 	margin-bottom: 80px;
 }
 
@@ -905,7 +903,7 @@ main {
 
 /* Dark Mode Fix */
 
-body.night-mode{
+body.night-mode {
 	background-color: #121212;
 	color: #f5f5f58c;
 }
@@ -920,6 +918,32 @@ img[data-src] {
 img[data-src][src] {
 	opacity: 1;
 }
+
+
+/* For 404 Page */
+.error404-wrapper {
+	padding: 112px 0;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.error404-wrapper {
+		padding: 28px 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.error404-wrapper .entry-title {
+		font-size: 24px;
+	}
+}
+
+.error404-wrapper form {
+	max-width: 520px;
+	margin: 0 auto;
+}
+
+
 
 /* ------------- Fontello CSS ------------ */
 

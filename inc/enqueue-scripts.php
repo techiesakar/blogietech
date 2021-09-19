@@ -33,7 +33,13 @@ function blogietech_scripts()
             false
         );
     };
-
+    wp_enqueue_style(
+        'blogietech-gallery',
+        get_template_directory_uri() . '/assets/css/gallery.css',
+        array(),
+        filemtime(get_template_directory() . '/assets/css/gallery.css'),
+        false
+    );
 
     wp_enqueue_style('blogietech-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'));
     wp_style_add_data('blogietech-style', 'rtl', 'replace');

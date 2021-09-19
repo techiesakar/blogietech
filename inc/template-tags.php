@@ -206,6 +206,36 @@ endif;
 
 // Pagination Ends
 
+// Dummy pagination
+
+if (!function_exists('test_pagination')) :
+	/**
+	 * Display Pagination
+	 */
+
+	function test_pagination()
+	{
+		global $wp_query;
+		$total = $wp_query->max_num_pages;
+		if ($total > 1) {
+			if (!$currentPage = get_query_var('paged'))
+				$currentPage = 1;
+			if (get_option('permalink_structure')) {
+				$format = '?paged=%#%';
+			}
+			echo paginate_links(array(
+				'base' => get_pagenum_link(1) . '%_%',
+				'format' => $format,
+				'current' => $currentPage,
+				'total' => $total,
+				'mid_size' => 4,
+				'type' => 'list'
+			));
+		}
+	}
+endif;
+// Dummy pagination ends
+
 
 function getPostViews($postID)
 {

@@ -95,6 +95,15 @@ header {
   width: auto;
   vertical-align: middle; }
 
+.night-mode .custom-logo-link {
+  display: none; }
+
+.custom-logo-link.night-mode-header-logo {
+  display: none; }
+
+.night-mode .night-mode-header-logo {
+  display: block; }
+
 @media (max-width: 992px) {
   #site-navigation {
     display: none; } }
@@ -243,6 +252,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
+  max-width: 300px;
   background: rgba(255, 255, 255, 0.932);
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,14 +1,8 @@
 <?php
-$currentPage = get_query_var('paged');
-global $wp_query;
 $default_posts_per_page = get_option('posts_per_page');
-$the_query = query_posts(array(
-    'post_type' => 'post',
-    'posts_per_page' => $default_posts_per_page,
-));
-$wp_query = new WP_Query($the_query);
 $count = 1;
-while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+while (have_posts()) :
+    the_post(); ?>
     <?php if ($count <= $default_posts_per_page) : ?>
         <?php
         ?>
@@ -94,5 +88,7 @@ while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 <?php $count++;
 
 endwhile;
+test_pagination();
 wp_reset_postdata();
+
 ?>
