@@ -16,7 +16,6 @@
 get_header();
 ?>
 <main>
-
     <div class="container main-container homepage-content">
         <div class="primary">
             <div class="blog-post">
@@ -24,8 +23,6 @@ get_header();
                 get_template_part('template-parts/blocks/mixed-style', 'posts');
                 ?>
             </div>
-
-
         </div>
         <aside class="sidebar">
             <?php

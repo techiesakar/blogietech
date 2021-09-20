@@ -23,9 +23,16 @@ get_header();
 			?>
 		</div>
 		<aside class="sidebar">
-			<?php dynamic_sidebar('single-sidebar-1'); ?>
+			<?php dynamic_sidebar('single-sidebar-1');
+			?>
+
+			<div class="sticky-sidebar">
+				<?php dynamic_sidebar('single-sticky'); ?>
+			</div>
 		</aside>
 	</div>
+	<?php
+	blogietech_pagination(); ?>
 </main>
 
 <?php

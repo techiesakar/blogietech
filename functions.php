@@ -194,6 +194,8 @@ require get_template_directory() . '/inc/plugins/view-counter.php';
 require get_template_directory() . '/inc/plugins/emoji-off.php';
 require get_template_directory() . '/inc/plugins/enable-featured-image.php';
 
+require get_template_directory() . '/inc/plugins/seo-class.php';
+
 
 
 
@@ -260,3 +262,5 @@ $args = array(
 add_filter('posts_search', 'search_by_title', 10, 2);
 $recent_posts = wp_get_recent_posts($args, ARRAY_A);
 remove_filter('posts_search', 'search_by_title', 500);
+
+
