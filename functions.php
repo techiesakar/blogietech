@@ -193,21 +193,7 @@ require get_template_directory() . '/inc/plugins/view-counter.php';
 
 require get_template_directory() . '/inc/plugins/emoji-off.php';
 require get_template_directory() . '/inc/plugins/enable-featured-image.php';
-
-require get_template_directory() . '/inc/plugins/seo-class.php';
-
-
-
-
-// /** * Completely Remove jQuery From WordPress */
-// function my_init()
-// {
-// 	if (!is_admin()) {
-// 		wp_deregister_script('jquery');
-// 		wp_register_script('jquery', false);
-// 	}
-// }
-// add_action('init', 'my_init');
+require get_template_directory() . '/inc/plugins/between-related-posts.php';
 
 
 // Filter only posts in wordpress search result
