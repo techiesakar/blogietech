@@ -16,9 +16,8 @@ Use it to make something cool, have fun, and share what you've learned.
 
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
+/* -------- Table of Content ---------- */
+/*
 # Generic
 	- Box sizing
 	- Normalize
@@ -37,10 +36,15 @@ Use it to make something cool, have fun, and share what you've learned.
 	- Accessibility
 	- Container
 # Alignments
-# Header
-# Search Page
-# Error Page
-# Dark Mode Fix
+# Template Parts
+	- Header
+	- Search Page
+	- Error Page
+	- Pagination
+	- Gallery Posts
+	- Sidebar
+	- Footer
+	- Dark Mode Fix
 # Fontello
 --------------------------------------------------------------*/
 
@@ -1345,7 +1349,7 @@ main {
 
 .pagination .prev {
 	float: left;
-}
+} 
 
 .pagination .next {
 	float: right;
