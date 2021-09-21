@@ -4,7 +4,7 @@
 $header-height : 68px;
 
 .admin-bar {
-    header {
+    #header {
         top: 32px;
 
         @include media('<=768px') {
@@ -13,7 +13,7 @@ $header-height : 68px;
     }
 }
 
-header {
+#header {
     position: fixed;
     z-index: 99998;
     top: 0;
@@ -274,23 +274,17 @@ header {
 
 .search-form-wrapper {
     position: absolute;
-    // top: 86px;
-    // right: 0;
-    // width: 350px;
     max-width: 600px;
-
     right: 84px;
     width: 100%;
     z-index: -1;
     box-sizing: border-box;
-
     opacity: 0;
     visibility: hidden;
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
     border-radius: 2px;
     background: #fff;
-    // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.17);
     transition: all 0.17s ease;
 
     @include media('<=992px') {
@@ -478,7 +472,7 @@ header {
 
 .night-mode {
     header {
-        background: $night-mode-bg;
+        background: $night-mode-bg!important;
         border-bottom: 0.5px solid $blue;
         .menu-toggle {
             svg * {

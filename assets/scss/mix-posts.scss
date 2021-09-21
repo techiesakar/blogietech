@@ -23,9 +23,7 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
 
-    @include media('<=1022px') {
-
-    }
+    @include media('<=1022px') {}
 
     @include media('<=768px') {
         gap: 8px;
@@ -34,7 +32,8 @@
     @include media('<=620px') {
         display: block;
     }
-    a{
+
+    a {
         text-decoration: none;
     }
 
@@ -54,7 +53,7 @@
     }
 
     article {
-        margin:0;
+        margin: 0;
         padding: 36px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -87,11 +86,12 @@
         }
     }
 
-    .post-item-2, .post-item-3 {
+    .post-item-2,
+    .post-item-3 {
         grid-column: span 6;
     }
 
-   
+
 
     .post-item-2,
     .post-item-3,
@@ -250,71 +250,4 @@
         }
 
     }
-
-
-
-}
-
-.pagination {
-    @extend .container;
-    list-style: none;
-    text-align: center;
-    padding: 30px 40px;
-    margin-top: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: relative;
-
-    svg {
-        height: 14px;
-        width: 14px;
-    }
-
-
-    .page-numbers {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 700;
-        color: #393939;
-        text-decoration: none;
-        margin-right: 4px;
-        padding: 7px 7px 10px;
-    }
-
-    .prev,
-    .next {
-        font-size: 14px;
-        font-weight: 600;
-        color: #fff;
-        background: $hover-color;
-        padding: 11px 16px !important;
-        text-transform: uppercase;
-
-        &:hover {
-            background: $blue;
-        }
-    }
-
-    .prev {
-        float: left;
-    }
-
-    .next {
-        float: right;
-    }
-
-    span.current {
-        color: $hover-color;
-    }
-}
-
-// Night Mode Fix
-
-.night-mode.home {
-   article{
-       box-shadow: none;
-   }
-
-   .pagination{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-   }
 }

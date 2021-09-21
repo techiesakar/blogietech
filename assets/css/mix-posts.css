@@ -29,17 +29,17 @@
 * Testing
 *
 **/
-.container, .pagination {
+.container {
   margin: 0 auto;
   padding: 0 15px; }
   @media (min-width: 768px) {
-    .container, .pagination {
+    .container {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .pagination {
+    .container {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .pagination {
+    .container {
       width: 1170px;
       padding: 0; } }
 
@@ -96,7 +96,8 @@
     @media (max-width: 1022px) {
       .blog-post .post-item-1 p {
         margin: 4px 0; } }
-  .blog-post .post-item-2, .blog-post .post-item-3 {
+  .blog-post .post-item-2,
+  .blog-post .post-item-3 {
     grid-column: span 6; }
   @media (max-width: 768px) {
     .blog-post .post-item-2,
@@ -152,7 +153,8 @@
         .blog-post .post-item-else .post-categories a {
           font-size: 12px;
           font-weight: 600; } }
-  .blog-post .post-item-2, .blog-post .post-item-3 {
+  .blog-post .post-item-2,
+  .blog-post .post-item-3 {
     padding: 0; }
     .blog-post .post-item-2 img,
     .blog-post .post-item-3 img {
@@ -217,45 +219,3 @@
         font-size: 14px;
         padding: 6px;
         width: 90px; } }
-
-.pagination {
-  list-style: none;
-  text-align: center;
-  padding: 30px 40px;
-  margin-top: 30px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  position: relative; }
-  .pagination svg {
-    height: 14px;
-    width: 14px; }
-  .pagination .page-numbers {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 700;
-    color: #393939;
-    text-decoration: none;
-    margin-right: 4px;
-    padding: 7px 7px 10px; }
-  .pagination .prev,
-  .pagination .next {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    background: #cc4551;
-    padding: 11px 16px !important;
-    text-transform: uppercase; }
-    .pagination .prev:hover,
-    .pagination .next:hover {
-      background: #2685F4; }
-  .pagination .prev {
-    float: left; }
-  .pagination .next {
-    float: right; }
-  .pagination span.current {
-    color: #cc4551; }
-
-.night-mode.home article {
-  box-shadow: none; }
-
-.night-mode.home .pagination {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; }
