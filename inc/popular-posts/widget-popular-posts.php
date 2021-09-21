@@ -12,8 +12,8 @@ class Popular_Post_Widget extends WP_Widget
     {
         parent::__construct(
             'popular_post_widget', // Base ID
-            esc_html__('Popular Posts', 'partner'), // Name
-            array('description' => esc_html__('A Popular Post Widget', 'partner'),) // Args
+            esc_html__('Popular Posts', 'blogietech'), // Name
+            array('description' => esc_html__('A Popular Post Widget', 'blogietech'),) // Args
         );
     }
 
@@ -76,14 +76,14 @@ class Popular_Post_Widget extends WP_Widget
      */
     public function form($instance)
     {
-        $title = !empty($instance['title']) ? $instance['title'] : esc_html__('Popular Posts', 'partner');
-        $posts = !empty($instance['posts']) ? $instance['posts'] : esc_html__('5', 'partner');
+        $title = !empty($instance['title']) ? $instance['title'] : esc_html__('Popular Posts', 'blogietech');
+        $posts = !empty($instance['posts']) ? $instance['posts'] : esc_html__('5', 'blogietech');
         $show_date = isset($instance['show_date']) ? (bool) $instance['show_date'] : false;
     ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'partner'); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'blogietech'); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>">
-            <label for="<?php echo esc_attr($this->get_field_id('posts')); ?>"><?php esc_html_e('Number of Posts:', 'partner'); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('posts')); ?>"><?php esc_html_e('Number of Posts:', 'blogietech'); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('posts')); ?>" name="<?php echo esc_attr($this->get_field_name('posts')); ?>" type="text" value="<?php echo esc_attr($posts); ?>">
             <input class="checkbox" type="checkbox" <?php checked($show_date); ?> id="<?php echo $this->get_field_id('show_date'); ?>" name="<?php echo $this->get_field_name('show_date'); ?>" />
             <label for="<?php echo $this->get_field_id('show_date'); ?>"><?php _e('Display post date?'); ?></label>
