@@ -16,7 +16,7 @@ $total_results = $wp_query->found_posts;
 	<div class="search-header container">
 		<h1 class="page-title">
 			<?php
-			printf(esc_html__('Search Results - %s', 'partner'), '<span>' . get_search_query() . '</span>');
+			printf(esc_html__('Search Results - %s', 'blogietech'), '<span>' . get_search_query() . '</span>');
 
 			?>
 		</h1>

@@ -21,7 +21,7 @@ class pt_post_subtitle
         foreach ($this->config['post-type'] as $screen) {
             add_meta_box(
                 sanitize_title($this->config['title']),
-                // $this->config['title'],
+                $this->config['title'],
                 [$this, 'add_meta_box_callback'],
                 $screen,
                 $this->config['context'],
